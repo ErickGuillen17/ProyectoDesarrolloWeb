@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <h:outputStylesheet name="./css/default.css"/>
+        <h:outputStylesheet name="./css/cssLayout.css"/>
+        <title>Sistema</title>
+    </h:head>
+
+    <h:body>
+
+
+        <div id="top" class="top">
+            <ui:insert name="top">
+                <b:navBar class="nav" fluid="true" 
+                          brand-href="#{request.contextPath}/faces/principal.xhtml">
+                    <b:navbarLinks pull="left">
+                        <b:image library="img" name="logo.png" 
+                                 style="height: 80px"/>
+                    </b:navbarLinks>
+                    <b:navbarLinks>
+                        <b:navLink value="Home" icon-awesome="fa-home"
+                                   href="#{request.contextPath}/faces/principal.xhtml"/>
+                    </b:navbarLinks>
+                </b:navBar>
+            </ui:insert>
+        </div>
+        <div>
+            <div id="left">
+                <ui:insert name="left">
+                    <b:navbarLinks  style=" display: flex;
+                                   flex-direction: column;
+                                   justify-content: center;
+                                   align-content: center;">
+                        <b:navLink value="Home" icon-awesome="fa-home"
+                                   href="#{request.contextPath}/faces/principal.xhtml"/>
+                        <b:dropMenu value="My tickets" icon-awesome="fa-exclamation-circle">
+                            <b:navLink value="Example 1" icon-awesome="fa-home"
+                                       href="#{request.contextPath}"/>
+                            <b:navLink value="Example 2" icon-awesome="fa-home"
+                                       href="#{request.contextPath}"/>
+                            <b:navLink value="Example 3" icon-awesome="fa-home"
+                                       href="#{request.contextPath}"/>
+                            <b:navLink value="Example 4" icon-awesome="fa-home"
+                                       href="#{request.contextPath}"/>
+                        </b:dropMenu>
+                        <b:navLink value="Request Catalogue" icon-awesome="fa-list-alt "
+                                   href="#{request.contextPath}"/>
+                        <b:navLink value="Knowledge Base" icon-awesome="fa-database"
+                                   href="#{request.contextPath}"/>
+                        <b:navLink value="Surveys" icon-awesome="fa-comments-o"
+                                   href="#{request.contextPath}"/>
+                        <b:navLink value="Self Support" icon-awesome="fa-question-circle "
+                                   href="#{request.contextPath}"/>
+                        <b:navLink value="Services Status" icon-awesome="fa-cloud"
+                                   href="#{request.contextPath}"/>
+                        <b:navLink value="Usuario" icon-awesome="fa-user"
+                                   href="#{request.contextPath}"/>
+                        <b:navLink value="Logout " icon-awesome="fa-power-off "
+                                   href="#{request.contextPath}"/>
+                    </b:navbarLinks>
+                </ui:insert>
+            </div>
+            <div id="content" class="left_content">
+                <ui:insert name="content">
+                    <b:panelGrid  columns="4"> 
+                        <b:panel title="My Request" look="primary" collapsed="false" style="height: 400px; width: 600px;">
+                        <b:breadcrumbs>
+                            open
+                        </b:breadcrumbs>
+                        <b:breadcrumbs>
+                            Pending Approval
+                        </b:breadcrumbs>
+                        <b:breadcrumbs>
+                            In Progress
+                        </b:breadcrumbs> 
+                        <b:breadcrumbs>
+                            Completed
+                        </b:breadcrumbs> 
+                        <b:breadcrumbs>
+                            Pending User
+                        </b:breadcrumbs>
+                        <b:breadcrumbs>
+                            Surveys
+                        </b:breadcrumbs>
+                    </b:panel>
+                    <b:panel title="My Incidents" look="primary" collapsed="false" style="height: 400px; width: 600px;">
+                        <b:breadcrumbs>
+                            open
+                        </b:breadcrumbs>
+                        <b:breadcrumbs>
+                            Assigned
+                        </b:breadcrumbs>
+                        <b:breadcrumbs>
+                            In Progress
+                        </b:breadcrumbs> 
+                        <b:breadcrumbs>
+                            Solved
+                        </b:breadcrumbs> 
+                        <b:breadcrumbs>
+                            Pending User
+                        </b:breadcrumbs>
+                        <b:breadcrumbs>
+                            Surveys
+                        </b:breadcrumbs>
+                    </b:panel>
+                    
+                    <b:panel title="Request Catalog" look="primary" collapsed="false" style="height: 400px; width: 600px;">
+                        <b:breadcrumbs>
+                            <b:iconAwesome name="suitcase"/>
+                            Workplace Environment
+                        </b:breadcrumbs>
+                        <b:breadcrumbs>
+                            <b:iconAwesome name="mobile"/>
+                            Mobility and Connectivity
+                        </b:breadcrumbs>
+                        <b:breadcrumbs>
+                            <b:iconAwesome name="envelope-square"/>
+                            Messaging
+                        </b:breadcrumbs>
+                        <b:breadcrumbs>
+                            <b:iconAwesome name="fa-group"/>
+                            Time Reporting
+                        </b:breadcrumbs>
+                    </b:panel>
+                    <b:panel title="Knowledge Base" look="primary" collapsed="false" style="height: 400px; width: 600px;">
+                        <b:breadcrumbs>
+                            Book a new room from your Iphone or Ipad
+                        </b:breadcrumbs>
+                        <b:breadcrumbs>
+                            How to log on into your CISCO IP Phone
+                        </b:breadcrumbs>
+                        <b:breadcrumbs>
+                            How to connect to Amadeus VPN using MFA
+                        </b:breadcrumbs>
+                    </b:panel>
+                       
+            </b:panelGrid>
+                </ui:insert>
+            </div>
+        </div>
+    </h:body>
+
+</html>
