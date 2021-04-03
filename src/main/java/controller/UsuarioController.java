@@ -38,6 +38,7 @@ public class UsuarioController extends Usuario implements Serializable {
                     "Usuario o Contraseña incorrecta");
             FacesContext.getCurrentInstance().addMessage("loginForm:clave", msg);
             return "index.xhtml";
+            //Proyecto
         }
     }
 }
