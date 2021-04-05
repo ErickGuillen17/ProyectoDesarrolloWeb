@@ -12,18 +12,20 @@ package model;
 public class Usuario {
 
     private String idUsuario;
-    private String pwUsuario;
-    private String nombreUsuario;
-    private String idRol;
+    private String idEmpleado;
+    private Empleado elEmpleado;
+    private Rol miRol;
+    private String nomUsuario;
+    private String contrasenia;
 
     public Usuario() {
     }
 
-    public Usuario(String idUsuario, String pwUsuario, String nombreUsuario, String idRol) {
+    public Usuario(String idUsuario, String idEmpleado, String nomUsuario, String contrasenia) {
         this.idUsuario = idUsuario;
-        this.pwUsuario = pwUsuario;
-        this.nombreUsuario = nombreUsuario;
-        this.idRol = idRol;
+        this.idEmpleado = idEmpleado;
+        this.nomUsuario = nomUsuario;
+        this.contrasenia = contrasenia;
     }
 
     public String getIdUsuario() {
@@ -34,27 +36,29 @@ public class Usuario {
         this.idUsuario = idUsuario;
     }
 
-    public String getPwUsuario() {
-        return pwUsuario;
+    public String getIdEmpleado() {
+        return idEmpleado;
     }
 
-    public void setPwUsuario(String pwUsuario) {
-        this.pwUsuario = pwUsuario;
+    public void setIdEmpleado(String idEmpleado) {
+        this.idEmpleado = idEmpleado;
     }
 
-    public String getNombreUsuario() {
-        return nombreUsuario;
+    public String getNomUsuario() {
+        return nomUsuario;
     }
 
-    public void setNombreUsuario(String nombreUsuario) {
-        this.nombreUsuario = nombreUsuario;
+    public void setNomUsuario(String nomUsuario) {
+        this.nomUsuario = nomUsuario;
     }
 
-    public String getIdRol() {
-        return idRol;
+    public String getContrasenia() {
+        return contrasenia;
     }
 
-    public void setIdRol(String idRol) {
-        this.idRol = idRol;
+    public void setContrasenia(String contrasenia) {
+        this.contrasenia = contrasenia;
     }
+
+
 }
