@@ -14,7 +14,7 @@ public class Usuario {
     private String idUsuario;
     private String idEmpleado;
     private Empleado elEmpleado;
-    private Rol miRol;
+    public Rol miRol;
     private String nomUsuario;
     private String contrasenia;
 
@@ -59,6 +59,5 @@ public class Usuario {
     public void setContrasenia(String contrasenia) {
         this.contrasenia = contrasenia;
     }
-
 
 }

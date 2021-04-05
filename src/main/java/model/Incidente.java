@@ -10,19 +10,70 @@ package model;
  * @author Alejandro
  */
 public class Incidente {
+
     private String idIncidente;
-    private Tiquete elTiquete;
-    private Severidad laSeveridad;
-    private Sla elSla;
-    private Urgencia laUrgencia;
-    private EstadoCaso elEstadoCaso;
-            //idProducto(FK)	
-    private Inventario elInventario;
-    private Usuario elUsuario;
-            /*title	
-            bitacora
-            fechaCreacion
-            fechaSla	
-            fechaCierre*/
+    public Tiquete elTiquete;
+    public Severidad laSeveridad;
+    public Sla elSla;
+    public Urgencia laUrgencia;
+    public EstadoCaso elEstadoCaso;
+    //idProducto(FK)	
+    public Inventario elInventario;
+    public Usuario elUsuario;
+    private String title;
+    private String bitacora;
+    private String fechaCreacion;
+    private String fechaSla;
+    private String fechaCierre;
+
+    public String getIdIncidente() {
+        return idIncidente;
+    }
+
+    public void setIdIncidente(String idIncidente) {
+        this.idIncidente = idIncidente;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getBitacora() {
+        return bitacora;
+    }
+
+    public void setBitacora(String bitacora) {
+        this.bitacora = bitacora;
+    }
+
+    public String getFechaCreacion() {
+        return fechaCreacion;
+    }
+
+    public void setFechaCreacion(String fechaCreacion) {
+        this.fechaCreacion = fechaCreacion;
+    }
+
+    public String getFechaSla() {
+        return fechaSla;
+    }
+
+    public void setFechaSla(String fechaSla) {
+        this.fechaSla = fechaSla;
+    }
+
+    public String getFechaCierre() {
+        return fechaCierre;
+    }
+
+    public void setFechaCierre(String fechaCierre) {
+        this.fechaCierre = fechaCierre;
+    }
+
+
 
 }

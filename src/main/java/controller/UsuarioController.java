@@ -28,17 +28,16 @@ public class UsuarioController extends Usuario implements Serializable {
     }
 
     public String getUsuario() {
-        Usuario usuario = UsuarioGestion.getUsuario(this.getIdUsuario(), this.getPwUsuario());
+        Usuario usuario = UsuarioGestion.getUsuario(this.getIdUsuario(), this.getContrasenia());
         if (usuario != null) {
-            this.setNombreUsuario(usuario.getNombreUsuario());
-            this.setIdRol(usuario.getIdRol());      
+            this.setNomUsuario(usuario.getNomUsuario());
+            this.miRol.setIdRol(usuario.miRol.getIdRol());      
             return "principal.xhtml";
         } else {
             FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Error",
                     "Usuario o Contraseña incorrecta");
             FacesContext.getCurrentInstance().addMessage("loginForm:clave", msg);
             return "index.xhtml";
-            //Proyecto
         }
     }
 }

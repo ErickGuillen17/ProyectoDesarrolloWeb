@@ -10,5 +10,24 @@ package model;
  * @author Alejandro
  */
 public class EstadoCaso {
+    private String idCaso;
+    private String descripEstado;
+
+    public String getIdCaso() {
+        return idCaso;
+    }
+
+    public void setIdCaso(String idCaso) {
+        this.idCaso = idCaso;
+    }
+
+    public String getDescripEstado() {
+        return descripEstado;
+    }
+
+    public void setDescripEstado(String descripEstado) {
+        this.descripEstado = descripEstado;
+    }
+    
     
 }

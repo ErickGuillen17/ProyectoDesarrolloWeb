@@ -19,7 +19,7 @@ import model.Usuario;
  */
 public class UsuarioGestion {
 
-    private static final String SQL_GetUsuario = "Select * from usuario where idUsuario=? and pwUsuario=MD5(?)";
+    private static final String SQL_GetUsuario = "Select * from usuario where idUsuario=? and contrasenia=MD5(?)";
 
     public static Usuario getUsuario(String idUsuario, String password) {
         Usuario usuario = null;
@@ -32,9 +32,9 @@ public class UsuarioGestion {
 
                 usuario = new Usuario();
                 usuario.setIdUsuario(idUsuario);
-                usuario.setPwUsuario(password);
-                usuario.setNombreUsuario(rs.getString(4));
-                usuario.setIdRol(rs.getString(5));
+                usuario.setContrasenia(password);
+                usuario.setNomUsuario(rs.getString(4));
+                usuario.miRol.setIdRol(rs.getString(5));
             }
 
         } catch (SQLException ex) {

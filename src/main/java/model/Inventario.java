@@ -10,5 +10,16 @@ package model;
  * @author Alejandro
  */
 public class Inventario {
-    
+
+    String idEquipo;
+    public Proveedor elProveedor;
+
+    public String getIdEquipo() {
+        return idEquipo;
+    }
+
+    public void setIdEquipo(String idEquipo) {
+        this.idEquipo = idEquipo;
+    }
+
 }

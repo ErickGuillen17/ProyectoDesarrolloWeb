@@ -12,7 +12,7 @@ package model;
 public class Empleado {
 
     private String idEmpleado;
-    private Departamento elDepartamento;
+    public Departamento elDepartamento;
     private String Nombre;
     private String apellido1;
     private String apellido2;

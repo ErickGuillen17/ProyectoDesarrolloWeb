@@ -10,5 +10,25 @@ package model;
  * @author Alejandro
  */
 public class Severidad {
+
+    String idSeveridad;
+    String descripSeveridad;
+
+    public String getIdSeveridad() {
+        return idSeveridad;
+    }
+
+    public void setIdSeveridad(String idSeveridad) {
+        this.idSeveridad = idSeveridad;
+    }
+
+    public String getDescripSeveridad() {
+        return descripSeveridad;
+    }
+
+    public void setDescripSeveridad(String descripSeveridad) {
+        this.descripSeveridad = descripSeveridad;
+    }
+    
     
 }
