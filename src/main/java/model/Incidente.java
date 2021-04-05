@@ -19,10 +19,10 @@ public class Incidente {
             //idProducto(FK)	
     private Inventario elInventario;
     private Usuario elUsuario;
-            title	
+            /*title	
             bitacora
             fechaCreacion
             fechaSla	
-            fechaCierre
+            fechaCierre*/
 
 }

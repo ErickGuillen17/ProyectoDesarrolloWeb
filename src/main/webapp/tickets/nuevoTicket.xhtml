@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <body>
+        <ui:composition template="./../templates/plantilla.xhtml">
+            <ui:define name="content">
+                <h:form>
+                    <b:container fluid="true">
+                        <b:panel title="Nuevo Ticket" look="primary"  collapsible="false">
+                            <b:form horizontal="true">
+                                <b:formGroup>
+                                    <!--insertar el value-->
+                                    <b:selectOneMenu value="" required="true" label="Categoria">
+                                        <f:selectItem itemValue="sofware" itemLabel="sofware"/>
+                                        <f:selectItem itemValue="hardware" itemLabel="hardware"/>
+                                        <f:selectItem itemValue="otros" itemLabel="otros"/>
+                                    </b:selectOneMenu>
+                                </b:formGroup>
+                            </b:form>   
+                            <b:row tooltip="Digite el titulo">
+                                <b:column >
+                                    <h:outputText value="Titulo" 
+                                                  />
+                                </b:column>
+                                <b:column >
+                                    <b:inputText id="nombre"
+                                                 required="true"
+                                                 value=""/>
+                                    <!--insertar value-->
+                                </b:column>
+                            </b:row>
+                            <b:row tooltip="Digite la descripcion">
+                                <b:column >
+                                    <h:outputText value="Descripcion" 
+                                                  />
+                                </b:column>
+                                <b:column >
+                                    <b:inputText id="descripcion"
+                                                 required="true"
+                                                 value=""/>
+                                    <!--insertar value-->
+                                </b:column>
+                            </b:row>
+                            <b:row>
+                                <b:column span="5" offset="5" >
+                                    <b:commandButton value="Guardar"
+                                                     look="primary"
+                                                     style="width: 33%"
+                                                     ></b:commandButton>
+                                    <!--insertar un action="" en commandButton-->
+                                </b:column>
+                            </b:row>
+                        </b:panel>
+                    </b:container>
+                </h:form>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
