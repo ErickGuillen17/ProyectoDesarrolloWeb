@@ -12,7 +12,7 @@ package model;
 public class Empleado {
 
     private String idEmpleado;
-    public Departamento elDepartamento;
+    private Departamento elDepartamento;
     private String Nombre;
     private String apellido1;
     private String apellido2;
@@ -84,6 +84,10 @@ public class Empleado {
 
     public void setTelefono(String telefono) {
         this.telefono = telefono;
+    }
+
+    public Departamento getElDepartamento() {
+        return elDepartamento;
     }
 
 }

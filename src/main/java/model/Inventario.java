@@ -11,8 +11,8 @@ package model;
  */
 public class Inventario {
 
-    String idEquipo;
-    public Proveedor elProveedor;
+    private String idEquipo;
+    private Proveedor elProveedor;
 
     public String getIdEquipo() {
         return idEquipo;
@@ -20,6 +20,10 @@ public class Inventario {
 
     public void setIdEquipo(String idEquipo) {
         this.idEquipo = idEquipo;
+    }
+
+    public Proveedor getElProveedor() {
+        return elProveedor;
     }
 
 }

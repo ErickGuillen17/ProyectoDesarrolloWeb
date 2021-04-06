@@ -11,8 +11,8 @@ package model;
  */
 public class Severidad {
 
-    String idSeveridad;
-    String descripSeveridad;
+    private String idSeveridad;
+    private String descripSeveridad;
 
     public String getIdSeveridad() {
         return idSeveridad;

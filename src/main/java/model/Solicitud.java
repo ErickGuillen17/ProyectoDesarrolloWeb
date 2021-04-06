@@ -12,13 +12,13 @@ package model;
 public class Solicitud {
 
     private String idSolicitud;
-    public Tiquete elTiquete;
-    public Sla elSla;
-    public Urgencia laUrgencia;
-    public EstadoCaso elEstado;
+    private Tiquete elTiquete;
+    private Sla elSla;
+    private Urgencia laUrgencia;
+    private EstadoCaso elEstado;
     //idProducto(FK)	
-    public Inventario elInventario;
-    public Usuario elUsuario;
+    private Inventario elInventario;
+    private Usuario elUsuario;
     private String descripSolicitud;
     private String fechaCreacion;
     private String fechaSla;
@@ -62,6 +62,30 @@ public class Solicitud {
 
     public void setFechaCierre(String fechaCierre) {
         this.fechaCierre = fechaCierre;
+    }
+
+    public Tiquete getElTiquete() {
+        return elTiquete;
+    }
+
+    public Sla getElSla() {
+        return elSla;
+    }
+
+    public Urgencia getLaUrgencia() {
+        return laUrgencia;
+    }
+
+    public EstadoCaso getElEstado() {
+        return elEstado;
+    }
+
+    public Inventario getElInventario() {
+        return elInventario;
+    }
+
+    public Usuario getElUsuario() {
+        return elUsuario;
     }
     
     

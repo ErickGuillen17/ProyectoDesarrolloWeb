@@ -34,7 +34,7 @@ public class UsuarioGestion {
                 usuario.setIdUsuario(idUsuario);
                 usuario.setContrasenia(password);
                 usuario.setNomUsuario(rs.getString(4));
-                usuario.miRol.setIdRol(rs.getString(5));
+                usuario.getMiRol().setIdRol(rs.getString(5));
             }
 
         } catch (SQLException ex) {

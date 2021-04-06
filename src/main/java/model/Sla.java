@@ -12,8 +12,8 @@ package model;
 public class Sla {
 
     private String idSla;
-    public Severidad laSeveridad;
-    public Urgencia laUrgencia;
+    private Severidad laSeveridad;
+    private Urgencia laUrgencia;
     private String duracion; 
 
     public String getIdSla() {
@@ -30,6 +30,14 @@ public class Sla {
 
     public void setDuracion(String duracion) {
         this.duracion = duracion;
+    }
+
+    public Severidad getLaSeveridad() {
+        return laSeveridad;
+    }
+
+    public Urgencia getLaUrgencia() {
+        return laUrgencia;
     }
 
 }
