@@ -10,13 +10,20 @@ package model;
  * @author Alejandro
  */
 public class Tiquete {
-    private String idTiquete;
-    private String descripTiquete;
 
-    public Tiquete(String idTiquete, String descripTiquete) {
+    private String idTiquete;
+    private String titulo;
+    private String descripTiquete;
+    private String categoria;
+
+    public Tiquete(String idTiquete, String titulo, String descripTiquete, String categoria) {
         this.idTiquete = idTiquete;
+        this.titulo = titulo;
         this.descripTiquete = descripTiquete;
+        this.categoria = categoria;
     }
+
+
 
     public String getIdTiquete() {
         return idTiquete;
@@ -33,6 +40,21 @@ public class Tiquete {
     public void setDescripTiquete(String descripTiquete) {
         this.descripTiquete = descripTiquete;
     }
-    
-    
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
 }

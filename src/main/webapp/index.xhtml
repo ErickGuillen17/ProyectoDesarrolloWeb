@@ -30,7 +30,8 @@
                     <b:column medium-screen="1"/>
                     <b:column medium-screen="10"/>
                     <b:inputText placeholder="Usuario" id="usuario"
-                                 required="true" autocomplete="true" >
+                                 required="true" autocomplete="true"
+                                 value="#{usuarioController.idUsuario}">
                         <f:facet name="prepend">
                             <b:icon name="user"/>
                         </f:facet>
@@ -44,7 +45,7 @@
                     <b:column medium-screen="10"/>
                     <b:inputText placeholder="Clave" id="clave"
                                  required="true" autocomplete="true"
-                                 value="">
+                                 value="#{usuarioController.contrasenia}">
                         <f:facet name="prepend">
                             <b:iconAwesome name="key"/>
                         </f:facet>
@@ -58,7 +59,8 @@
                     <b:column medium-screen="2"/>
                     <b:commandButton value="Login"
                                      look="info"
-                                     style="width: 100%"/>
+                                     style="width: 100%"
+                                     action="#{usuarioController.getUsuario()}"/>
                 </b:row>
             </b:panel>
         </h:form>

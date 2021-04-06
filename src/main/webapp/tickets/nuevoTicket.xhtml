@@ -9,13 +9,13 @@
     <body>
         <ui:composition template="./../resources/templates/plantilla.xhtml">
             <ui:define name="content">
-                <h:form>
+                <h:form id="insertaTiqueteForm">
                     <b:container fluid="true">
                         <b:panel title="Nuevo Ticket" look="primary"  collapsible="false">
                             <b:form horizontal="true">
                                 <b:formGroup>
                                     <!--insertar el value-->
-                                    <b:selectOneMenu value="" required="true" label="Categoria">
+                                    <b:selectOneMenu value="#{tiqueteController.categoria}" required="true" label="Categoria">
                                         <f:selectItem itemValue="sofware" itemLabel="sofware"/>
                                         <f:selectItem itemValue="hardware" itemLabel="hardware"/>
                                         <f:selectItem itemValue="otros" itemLabel="otros"/>
@@ -30,7 +30,7 @@
                                 <b:column >
                                     <b:inputText id="nombre"
                                                  required="true"
-                                                 value=""/>
+                                                 value="#{tiqueteController.titulo}"/>
                                     <!--insertar value-->
                                 </b:column>
                             </b:row>
@@ -42,7 +42,7 @@
                                 <b:column >
                                     <b:inputText id="descripcion"
                                                  required="true"
-                                                 value=""/>
+                                                 value="#{tiqueteController.descripTiquete}"/>
                                     <!--insertar value-->
                                 </b:column>
                             </b:row>
@@ -51,6 +51,7 @@
                                     <b:commandButton value="Guardar"
                                                      look="primary"
                                                      style="width: 33%"
+                                                     action="#{tiqueteController.insertTiquete()}"
                                                      ></b:commandButton>
                                     <!--insertar un action="" en commandButton-->
                                 </b:column>
