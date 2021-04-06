@@ -31,12 +31,12 @@ public class TiqueteController extends Tiquete implements Serializable {
 
     public String insertEstudiante() {
         if (TiqueteGestion.insertTiquete(this)) {
-            return "list.xhtml";
+            return "nuevoTiquete.xhtml";
         } else {
             FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Error",
                     "Ocurrio un error al insertar un nuevo estudiante");
-            FacesContext.getCurrentInstance().addMessage("editaEstudianteForm:identificacion", msg);
-            return "edita.xhtml";
+            FacesContext.getCurrentInstance().addMessage("insertaTiqueteForm:titulo", msg);
+            return "nuevoTiquete.xhtml";
 
         }
     }

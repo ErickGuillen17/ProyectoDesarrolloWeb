@@ -16,6 +16,11 @@ public class Tiquete {
     private String descripTiquete;
     private String categoria;
 
+    public Tiquete() {
+    }
+
+    
+    
     public Tiquete(String idTiquete, String titulo, String descripTiquete, String categoria) {
         this.idTiquete = idTiquete;
         this.titulo = titulo;
