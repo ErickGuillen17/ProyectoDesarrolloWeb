@@ -28,14 +28,17 @@ public class TiqueteController extends Tiquete implements Serializable {
     public TiqueteController() {
     }
 
-    public String insertTiquete() {
+
+    public String insertEstudiante() {
         if (TiqueteGestion.insertTiquete(this)) {
-            return "nuevoTicket.xhtml";
+            return "list.xhtml";
         } else {
             FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Error",
-                    "Ocurrió un error al insertar un nuevo tiquete");
-            FacesContext.getCurrentInstance().addMessage("insertaTiqueteForm:categoria", msg);
-            return "nuevoTicket.xhtml";
+                    "Ocurrio un error al insertar un nuevo estudiante");
+            FacesContext.getCurrentInstance().addMessage("editaEstudianteForm:identificacion", msg);
+            return "edita.xhtml";
+
         }
     }
+
 }
