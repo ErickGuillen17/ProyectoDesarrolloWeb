@@ -30,7 +30,7 @@ public class UsuarioController extends Usuario implements Serializable {
     public String getUsuario() {
         Usuario usuario = UsuarioGestion.getUsuario(this.getIdUsuario(), this.getContrasenia());
         if (usuario != null) {
-            this.setNomUsuario(usuario.getNomUsuario());
+            this.setNombreUsuario(usuario.getNombreUsuario());
             this.getMiRol().setIdRol(usuario.getMiRol().getIdRol());      
             return "home.xhtml";
         } else {

@@ -15,7 +15,7 @@ public class Usuario {
     private String idEmpleado;
     private Empleado elEmpleado;
     private Rol miRol;
-    private String nomUsuario;
+    private String nombreUsuario;
     private String contrasenia;
 
     public Usuario() {
@@ -24,7 +24,7 @@ public class Usuario {
     public Usuario(String idUsuario, String idEmpleado, String nomUsuario, String contrasenia) {
         this.idUsuario = idUsuario;
         this.idEmpleado = idEmpleado;
-        this.nomUsuario = nomUsuario;
+        this.nombreUsuario = nomUsuario;
         this.contrasenia = contrasenia;
     }
 
@@ -44,12 +44,12 @@ public class Usuario {
         this.idEmpleado = idEmpleado;
     }
 
-    public String getNomUsuario() {
-        return nomUsuario;
+    public String getNombreUsuario() {
+        return nombreUsuario;
     }
 
-    public void setNomUsuario(String nomUsuario) {
-        this.nomUsuario = nomUsuario;
+    public void setNombreUsuario(String nomUsuario) {
+        this.nombreUsuario = nomUsuario;
     }
 
     public String getContrasenia() {

@@ -11,7 +11,7 @@ package model;
  */
 public class Tiquete {
 
-    private String idTiquete;
+    private int idTiquete;
     private String titulo;
     private String descripTiquete;
     private String categoria;
@@ -21,7 +21,7 @@ public class Tiquete {
 
     
     
-    public Tiquete(String idTiquete, String titulo, String descripTiquete, String categoria) {
+    public Tiquete(int idTiquete, String titulo, String descripTiquete, String categoria) {
         this.idTiquete = idTiquete;
         this.titulo = titulo;
         this.descripTiquete = descripTiquete;
@@ -30,11 +30,11 @@ public class Tiquete {
 
 
 
-    public String getIdTiquete() {
+    public int getIdTiquete() {
         return idTiquete;
     }
 
-    public void setIdTiquete(String idTiquete) {
+    public void setIdTiquete(int idTiquete) {
         this.idTiquete = idTiquete;
     }
 

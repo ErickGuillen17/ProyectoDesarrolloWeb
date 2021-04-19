@@ -6,12 +6,13 @@
 package gestion;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.Conexion;
 import model.Tiquete;
-
 
 /**
  *
@@ -19,15 +20,37 @@ import model.Tiquete;
  */
 public class TiqueteGestion {
 
+    private static final String SQL_GETTIQUETES = "SELECT * FROM tiquete";
+    private static final String SQL_INSERTTIQUETE = "insert into tiquete(idTiquete,descripcionTiquete,titulo,categoria) VALUES (?,?,?,?)";
 
-    private static final String SQL_INSERTTIQUETE = "insert into tiquete(idTiquete,titulo,descripTiquete,categoria) VALUES (?,?,?,?)";
+    public static ArrayList<Tiquete> getTiquetes() {
+        ArrayList<Tiquete> lista = new ArrayList<>();
+        try {
+            PreparedStatement sentencia = Conexion.getConexion()
+                    .prepareStatement(SQL_GETTIQUETES);
+            ResultSet rs = sentencia.executeQuery();
+            while (rs != null && rs.next()) {
+                lista.add(new Tiquete(
+                        rs.getInt(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getString(4)
+                ));
+            }
 
+        } catch (SQLException ex) {
+            Logger.getLogger(TiqueteGestion.class.getName())
+                    .log(Level.SEVERE, null, ex);
+        }
+        return lista;
+
+    }
 
     public static boolean insertTiquete(Tiquete tiquete) {
         try {
             PreparedStatement sentencia = Conexion.getConexion()
                     .prepareStatement(SQL_INSERTTIQUETE);
-            sentencia.setString(1, tiquete.getIdTiquete());
+            sentencia.setInt(1, tiquete.getIdTiquete());
             sentencia.setString(2, tiquete.getTitulo());
             sentencia.setString(3, tiquete.getDescripTiquete());
             sentencia.setString(4, tiquete.getCategoria());

@@ -9,10 +9,10 @@ import gestion.TiqueteGestion;
 import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
+import java.util.List;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import model.Tiquete;
-
 
 /**
  *
@@ -28,6 +28,9 @@ public class TiqueteController extends Tiquete implements Serializable {
     public TiqueteController() {
     }
 
+    public List<Tiquete> getTiquetes() {
+        return TiqueteGestion.getTiquetes();
+    }
 
     public String insertEstudiante() {
         if (TiqueteGestion.insertTiquete(this)) {

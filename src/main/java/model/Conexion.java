@@ -19,7 +19,7 @@ import java.util.logging.Logger;
 public class Conexion {
 
     private static Conexion conexion;
-    private static final String DBURL = "jdbc:mysql://localhost:3306/ugeneral?zeroDateTimeBehavior=CONVERT_TO_NULL";
+    private static final String DBURL = "jdbc:mysql://localhost:3306/ugeneral?serverTimezone=UTC";
     private static Connection conn = null;
 
     private Conexion() {
@@ -27,7 +27,7 @@ public class Conexion {
             Class.forName("com.mysql.cj.jdbc.Driver")
                     .getDeclaredConstructor()
                     .newInstance();
-            conn = DriverManager.getConnection(DBURL, "administrador", "12345");
+            conn = DriverManager.getConnection(DBURL, "ugeneral_user", "Prueba123_");
 
         } catch (ClassNotFoundException | SQLException
                 | NoSuchMethodException | SecurityException | InstantiationException
