@@ -11,7 +11,7 @@ package model;
  */
 public class Usuario {
 
-    private String idUsuario;
+    private int idUsuario;
     private String idEmpleado;
     private Empleado elEmpleado;
     private Rol miRol;
@@ -21,18 +21,18 @@ public class Usuario {
     public Usuario() {
     }
 
-    public Usuario(String idUsuario, String idEmpleado, String nomUsuario, String contrasenia) {
+    public Usuario(int idUsuario, String idEmpleado, String nombreUsuario, String contrasenia) {
         this.idUsuario = idUsuario;
         this.idEmpleado = idEmpleado;
-        this.nombreUsuario = nomUsuario;
+        this.nombreUsuario = nombreUsuario;
         this.contrasenia = contrasenia;
     }
 
-    public String getIdUsuario() {
+    public int getIdUsuario() {
         return idUsuario;
     }
 
-    public void setIdUsuario(String idUsuario) {
+    public void setIdUsuario(int idUsuario) {
         this.idUsuario = idUsuario;
     }
 
@@ -48,8 +48,8 @@ public class Usuario {
         return nombreUsuario;
     }
 
-    public void setNombreUsuario(String nomUsuario) {
-        this.nombreUsuario = nomUsuario;
+    public void setNombreUsuario(String nombreUsuario) {
+        this.nombreUsuario = nombreUsuario;
     }
 
     public String getContrasenia() {

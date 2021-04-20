@@ -11,7 +11,7 @@ package model;
  */
 public class Empleado {
 
-    private String idEmpleado;
+    private int idEmpleado;
     private Departamento elDepartamento;
     private String Nombre;
     private String apellido1;
@@ -20,7 +20,7 @@ public class Empleado {
     private String direccion;
     private String telefono;
 
-    public Empleado(String idEmpleado, String Nombre, String apellido1, String apellido2, String email, String direccion, String telefono) {
+    public Empleado(int idEmpleado, String Nombre, String apellido1, String apellido2, String email, String direccion, String telefono) {
         this.idEmpleado = idEmpleado;
         this.Nombre = Nombre;
         this.apellido1 = apellido1;
@@ -30,11 +30,11 @@ public class Empleado {
         this.telefono = telefono;
     }
 
-    public String getIdEmpleado() {
+    public int getIdEmpleado() {
         return idEmpleado;
     }
 
-    public void setIdEmpleado(String idEmpleado) {
+    public void setIdEmpleado(int idEmpleado) {
         this.idEmpleado = idEmpleado;
     }
 

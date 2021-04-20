@@ -10,14 +10,14 @@ package model;
  * @author Alejandro
  */
 public class Rol {
-    private String idRol;
+    private int idRol;
     private String descripRol;
 
-    public String getIdRol() {
+    public int getIdRol() {
         return idRol;
     }
 
-    public void setIdRol(String idRol) {
+    public void setIdRol(int idRol) {
         this.idRol = idRol;
     }
 

@@ -33,9 +33,11 @@ public class UsuarioGestion {
                 usuario = new Usuario();
                 usuario.setNombreUsuario(nombreUsuario);
                 usuario.setContrasenia(password);
-                usuario.setIdUsuario(rs.getString(1));
-                usuario.getMiRol().setIdRol(rs.getString(4));
-                usuario.getElEmpleado().setIdEmpleado(rs.getString(3));
+                usuario.setIdUsuario(rs.getInt(1));
+                usuario.getMiRol().setIdRol(rs.getInt(4));
+                usuario.getElEmpleado().setIdEmpleado(rs.getInt(3));
+                
+
             }
 
         } catch (SQLException ex) {
