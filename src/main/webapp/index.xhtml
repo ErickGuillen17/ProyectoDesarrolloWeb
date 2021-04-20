@@ -43,13 +43,13 @@
                 <b:row tooltip="Digite la contraseña">
                     <b:column medium-screen="1" />
                     <b:column medium-screen="10"/>
-                    <b:inputText placeholder="Clave" id="clave"
+                    <b:inputSecret placeholder="Clave" id="clave"
                                  required="true" autocomplete="true"
                                  value="#{usuarioController.contrasenia}">
                         <f:facet name="prepend">
                             <b:iconAwesome name="key"/>
                         </f:facet>
-                    </b:inputText> 
+                    </b:inputSecret> 
                     <b:column medium-screen="1" style-class="message">
                         <b:message for="clave"/>
                     </b:column>

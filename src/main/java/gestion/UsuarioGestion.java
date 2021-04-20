@@ -29,14 +29,14 @@ public class UsuarioGestion {
             sentencia.setString(2, password);
             ResultSet rs = sentencia.executeQuery();
             if (rs.next()) {
-
+                
                 usuario = new Usuario();
                 usuario.setNombreUsuario(nombreUsuario);
                 usuario.setContrasenia(password);
                 usuario.setIdUsuario(rs.getInt(1));
-                usuario.getMiRol().setIdRol(rs.getInt(4));
-                usuario.getElEmpleado().setIdEmpleado(rs.getInt(3));
-                
+//                usuario.getMiRol().setIdRol(rs.getInt(4));
+//                usuario.getElEmpleado().setIdEmpleado(rs.getInt(3));
+//                
 
             }
 

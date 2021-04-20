@@ -14,7 +14,7 @@
                     <b:container fluid="true">
                         <b:panel title="Lista de casos" look="primary" collapsible="false">
                             <b:dataTable value="#{tiqueteController.tiquetes}"
-                                         var="estudiante"
+                                         var="tiquete"
                                          excel="true"
                                          csv="true"
                                          pdf="true"
@@ -22,34 +22,18 @@
                                          copy="true"
                                          print="true"
                                          >
-                                <b:dataTableColumn value="#{estudiante.idEstudiante}"
-                                                   label="Identificacion"
+                                <b:dataTableColumn value="#{tiquete.idTiquete}"
+                                                   label="Id. tiquete"
                                                    width="9%"/>
-                                <b:dataTableColumn value="#{estudiante.nombre}"
-                                                   label="Nombre"
+                                <b:dataTableColumn value="#{tiquete.titulo}"
+                                                   label="Titulo del tiquete"
+                                                   width="19%"/>
+                                <b:dataTableColumn value="#{tiquete.categoria}"
+                                                   label="Categoria"
                                                    width="15%"/>
-                                <b:dataTableColumn value="#{estudiante.apellido1}"
-                                                   label="Primer Apellido"
-                                                   width="19%"/>
-                                <b:dataTableColumn value="#{estudiante.apellido2}"
-                                                   label="Segundo Apellido"
-                                                   width="19%"/>
-                                <b:dataTableColumn value="#{estudiante.fechaNaci}"
-                                                   label="F. Nacimiento"
-                                                   width="10%"/>
-                                <b:dataTableColumn value="#{estudiante.fechaIngr}"
-                                                   label="F. Ingreso"
-                                                   width="10%"
-                                                   />
-                                <b:dataTableColumn value="#{estudiante.genero}"
-                                                   label="Genero"
-                                                   width="8%"/>
-                                <b:dataTableColumn style="text-align: center"
-                                                   label="Accion"
-                                                   width="10%">
-                                    <b:commandButton value="Editar"
-                                                     action="#{estudianteController.editaEstudiante(estudiante.id, estudiante.idEstudiante)}"/>
-                                </b:dataTableColumn>                                
+                                <b:dataTableColumn value="#{tiquete.descripcionTiquete}"
+                                                   label="Descripcion del tiquete"
+                                                   width="20%"/>                            
                             </b:dataTable>
                         </b:panel>
                     </b:container>

@@ -20,8 +20,8 @@ import model.Tiquete;
  */
 public class TiqueteGestion {
 
-    private static final String SQL_GETTIQUETES = "SELECT * FROM tiquete";
-    private static final String SQL_INSERTTIQUETE = "insert into tiquete(idTiquete,descripcionTiquete,titulo,categoria) VALUES (?,?,?,?)";
+    private static final String SQL_GETTIQUETES = "SELECT * FROM proyecto.tiquete";
+    private static final String SQL_INSERTTIQUETE = "insert into proyecto.tiquete(idTiquete,descripcionTiquete,titulo,categoria) VALUES (?,?,?,?)";
 
     public static ArrayList<Tiquete> getTiquetes() {
         ArrayList<Tiquete> lista = new ArrayList<>();
@@ -52,7 +52,7 @@ public class TiqueteGestion {
                     .prepareStatement(SQL_INSERTTIQUETE);
             sentencia.setInt(1, tiquete.getIdTiquete());
             sentencia.setString(2, tiquete.getTitulo());
-            sentencia.setString(3, tiquete.getDescripTiquete());
+            sentencia.setString(3, tiquete.getDescripcionTiquete());
             sentencia.setString(4, tiquete.getCategoria());
             return sentencia.executeUpdate() > 0;
         } catch (SQLException ex) {

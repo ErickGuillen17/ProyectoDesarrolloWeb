@@ -20,6 +20,11 @@ public class Empleado {
     private String direccion;
     private String telefono;
 
+    public Empleado() {
+    }
+
+    
+    
     public Empleado(int idEmpleado, String Nombre, String apellido1, String apellido2, String email, String direccion, String telefono) {
         this.idEmpleado = idEmpleado;
         this.Nombre = Nombre;

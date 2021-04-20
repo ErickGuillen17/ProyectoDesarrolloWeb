@@ -26,16 +26,8 @@
                     <b:navbarLinks>
                         <b:navLink value="Home" icon-awesome="fa-home"
                                    href="#{request.contextPath}/faces/home.xhtml"/>
-                        <b:dropMenu value="My tickets" icon-awesome="fa-exclamation-circle">
-                            <b:navLink value="Example 1" icon-awesome="fa-home"
-                                       href="#{request.contextPath}"/>
-                            <b:navLink value="Example 2" icon-awesome="fa-home"
-                                       href="#{request.contextPath}"/>
-                            <b:navLink value="Example 3" icon-awesome="fa-home"
-                                       href="#{request.contextPath}"/>
-                            <b:navLink value="Example 4" icon-awesome="fa-home"
-                                       href="#{request.contextPath}"/>
-                        </b:dropMenu>
+                        <b:navLink value="My cases" icon-awesome="fa-exclamation-circle"
+                                   href="#{request.contextPath}/faces/tickets/misCasos.xhtml"/>
                         <b:navLink value="New Ticket" icon-awesome="fa-list-alt "
                                    href="#{request.contextPath}/faces/tickets/nuevoTicket.xhtml"/>
                         <b:navLink value="Request Catalogue" icon-awesome="fa-list-alt "
@@ -48,10 +40,12 @@
                                    href="#{request.contextPath}"/>
                         <b:navLink value="Services Status" icon-awesome="fa-cloud"
                                    href="#{request.contextPath}"/>
-                        <b:navLink value="Usuario" icon-awesome="fa-user"
+                    </b:navbarLinks>
+                    <b:navbarLinks pull="right">
+                        <b:navLink value="#{usuarioController.nombreUsuario}" icon-awesome="fa-user"
                                    href="#{request.contextPath}"/>
                         <b:navLink value="Logout " icon-awesome="fa-power-off "
-                                   href="#{request.contextPath}"/>
+                                   href="#{request.contextPath}"/>                                                
                     </b:navbarLinks>
                 </b:navBar>
             </ui:insert>

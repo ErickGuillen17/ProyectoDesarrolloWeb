@@ -13,7 +13,7 @@ public class Tiquete {
 
     private int idTiquete;
     private String titulo;
-    private String descripTiquete;
+    private String descripcionTiquete;
     private String categoria;
 
     public Tiquete() {
@@ -21,10 +21,10 @@ public class Tiquete {
 
     
     
-    public Tiquete(int idTiquete, String titulo, String descripTiquete, String categoria) {
+    public Tiquete(int idTiquete, String descripcionTiquete, String titulo, String categoria) {
         this.idTiquete = idTiquete;
         this.titulo = titulo;
-        this.descripTiquete = descripTiquete;
+        this.descripcionTiquete = descripcionTiquete;
         this.categoria = categoria;
     }
 
@@ -38,12 +38,12 @@ public class Tiquete {
         this.idTiquete = idTiquete;
     }
 
-    public String getDescripTiquete() {
-        return descripTiquete;
+    public String getDescripcionTiquete() {
+        return descripcionTiquete;
     }
 
-    public void setDescripTiquete(String descripTiquete) {
-        this.descripTiquete = descripTiquete;
+    public void setDescripcionTiquete(String descripcionTiquete) {
+        this.descripcionTiquete = descripcionTiquete;
     }
 
     public String getCategoria() {

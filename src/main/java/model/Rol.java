@@ -11,8 +11,12 @@ package model;
  */
 public class Rol {
     private int idRol;
-    private String descripRol;
+    //private String descripRol;
 
+    public Rol() {
+    }
+
+    
     public int getIdRol() {
         return idRol;
     }
@@ -20,13 +24,13 @@ public class Rol {
     public void setIdRol(int idRol) {
         this.idRol = idRol;
     }
-
-    public String getDescripRol() {
-        return descripRol;
-    }
-
-    public void setDescripRol(String descripRol) {
-        this.descripRol = descripRol;
-    }
+//
+//    public String getDescripRol() {
+//        return descripRol;
+//    }
+//
+//    public void setDescripRol(String descripRol) {
+//        this.descripRol = descripRol;
+//    }
     
 }

@@ -31,7 +31,7 @@ public class UsuarioController extends Usuario implements Serializable {
         Usuario usuario = UsuarioGestion.getUsuario(this.getNombreUsuario(), this.getContrasenia());
         if (usuario != null) {
             this.setNombreUsuario(usuario.getNombreUsuario());
-            this.getMiRol().setIdRol(usuario.getMiRol().getIdRol());      
+//            this.getMiRol().setIdRol(usuario.getMiRol().getIdRol());      
             return "home.xhtml";
         } else {
             FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Error",
