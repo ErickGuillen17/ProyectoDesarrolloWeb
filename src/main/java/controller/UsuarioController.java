@@ -15,7 +15,7 @@ import model.Usuario;
 
 /**
  *
- * @author User
+ * @author Dell
  */
 @Named(value = "usuarioController")
 @SessionScoped
@@ -28,16 +28,15 @@ public class UsuarioController extends Usuario implements Serializable {
     }
 
     public String getUsuario() {
-        Usuario usuario = UsuarioGestion.getUsuario(this.getNombreUsuario(), this.getContrasenia());
+        Usuario usuario = UsuarioGestion.getUsuario(this.getNombreUsuario(),
+                this.getContrasenia());
         if (usuario != null) {
-            this.setNombreUsuario(usuario.getNombreUsuario());
-//            this.getMiRol().setIdRol(usuario.getMiRol().getIdRol());      
             return "home.xhtml";
         } else {
-            FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Error",
-                    "Usuario o Contraseña incorrecta");
+            FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_ERROR,
+                    "Error", "Usuario o Contraseña incorrecta");
             FacesContext.getCurrentInstance().addMessage("loginForm:clave", msg);
-            return "index.xhtml";
+            return "index.html";
         }
     }
 }

@@ -1,90 +1,34 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:b="http://bootsfaces.net/ui">
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>09 Gráfico Animados</title>
+        <style type="text/css">
+            .left {
+                text-align: left;
+            }
 
-    <body>
-
-        <ui:composition template="./resources/templates/plantilla.xhtml">
-
+            .right div {
+                float: right;
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <ui:composition template="resources/templates/plantilla.xhtml">
             <ui:define name="content">
-                <b:panelGrid  columns="4"> 
-                    <b:panel title="My Request" look="primary" collapsed="false" style="height: 400px; width: 600px;">
-                        <b:breadcrumbs>
-                            open
-                        </b:breadcrumbs>
-                        <b:breadcrumbs>
-                            Pending Approval
-                        </b:breadcrumbs>
-                        <b:breadcrumbs>
-                            In Progress
-                        </b:breadcrumbs> 
-                        <b:breadcrumbs>
-                            Completed
-                        </b:breadcrumbs> 
-                        <b:breadcrumbs>
-                            Pending User
-                        </b:breadcrumbs>
-                        <b:breadcrumbs>
-                            Surveys
-                        </b:breadcrumbs>
-                    </b:panel>
-                    <b:panel title="My Incidents" look="primary" collapsed="false" style="height: 400px; width: 600px;">
-                        <b:breadcrumbs>
-                            open
-                        </b:breadcrumbs>
-                        <b:breadcrumbs>
-                            Assigned
-                        </b:breadcrumbs>
-                        <b:breadcrumbs>
-                            In Progress
-                        </b:breadcrumbs> 
-                        <b:breadcrumbs>
-                            Solved
-                        </b:breadcrumbs> 
-                        <b:breadcrumbs>
-                            Pending User
-                        </b:breadcrumbs>
-                        <b:breadcrumbs>
-                            Surveys
-                        </b:breadcrumbs>
-                    </b:panel>
-
-                    <b:panel title="Request Catalog" look="primary" collapsed="false" style="height: 400px; width: 600px;">
-                        <b:breadcrumbs>
-                            <b:iconAwesome name="suitcase"/>
-                            Workplace Environment
-                        </b:breadcrumbs>
-                        <b:breadcrumbs>
-                            <b:iconAwesome name="mobile"/>
-                            Mobility and Connectivity
-                        </b:breadcrumbs>
-                        <b:breadcrumbs>
-                            <b:iconAwesome name="envelope-square"/>
-                            Messaging
-                        </b:breadcrumbs>
-                        <b:breadcrumbs>
-                            <b:iconAwesome name="fa-group"/>
-                            Time Reporting
-                        </b:breadcrumbs>
-                    </b:panel>
-                    <b:panel title="Knowledge Base" look="primary" collapsed="false" style="height: 400px; width: 600px;">
-                        <b:breadcrumbs>
-                            <b:navLink value="How to back up information from an old Iphone to a new one"
-                                   href="#{request.contextPath}/faces/articulos/articulo1.xhtml"/>
-                        </b:breadcrumbs>
-                        <b:breadcrumbs>
-                            <b:navLink value="how to connect to a VPN"
-                                   href="#{request.contextPath}/faces/articulos/articulo2.xhtml"/>
-                        </b:breadcrumbs>
-                        <b:breadcrumbs>
-                            <b:navLink value="how to create a VPN profile"
-                                   href="#{request.contextPath}/faces/articulos/articulo3.xhtml"/>
-                        </b:breadcrumbs>
-                    </b:panel>
-                </b:panelGrid>
+                <h:panelGrid columns="2" columnClasses="left,right" style="width:100%;
+                             margin: 20px;">
+                    <p:chart type="bar" model="#{chartAnimatedView1.animatedIncidents1}" style="width:98%;" />
+                </h:panelGrid>
+                <h:panelGrid columns="2" columnClasses="left,right" style="width:100%">
+                    <p:chart type="bar" model="#{chartAnimatedView1.animatedIncidents2}" style="width:98%;
+                             margin: 20px;" />
+                </h:panelGrid>
             </ui:define>
         </ui:composition>
-    </body>
+    </h:body>
 </html>
+

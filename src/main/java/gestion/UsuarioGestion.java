@@ -15,35 +15,29 @@ import model.Usuario;
 
 /**
  *
- * @author User
+ * @author Dell
  */
 public class UsuarioGestion {
 
-    private static final String SQL_GETUSUARIO = "Select * from proyecto.usuario where nombreUsuario=? and contrasenia=?";
+    private static final String SQL_GetUsuario = "SELECT * FROM usuario where nombreUsuario=? and contrasenia=?";
 
-    public static Usuario getUsuario(String nombreUsuario, String password) {
+    public static Usuario getUsuario(String nombreUsuario, String contrasenia) {
         Usuario usuario = null;
         try {
-            PreparedStatement sentencia = Conexion.getConexion().prepareStatement(SQL_GETUSUARIO);
+            PreparedStatement sentencia = Conexion.getConexion().prepareStatement(SQL_GetUsuario);
             sentencia.setString(1, nombreUsuario);
-            sentencia.setString(2, password);
+            sentencia.setString(2, contrasenia);
             ResultSet rs = sentencia.executeQuery();
             if (rs.next()) {
-                
                 usuario = new Usuario();
                 usuario.setNombreUsuario(nombreUsuario);
-                usuario.setContrasenia(password);
-                usuario.setIdUsuario(rs.getInt(1));
-//                usuario.getMiRol().setIdRol(rs.getInt(4));
-//                usuario.getElEmpleado().setIdEmpleado(rs.getInt(3));
-//                
-
+                usuario.setContrasenia(contrasenia);
             }
 
         } catch (SQLException ex) {
-            Logger.getLogger(UsuarioGestion.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(UsuarioGestion.class.getName())
+                    .log(Level.SEVERE, null, ex);
         }
         return usuario;
     }
-
 }

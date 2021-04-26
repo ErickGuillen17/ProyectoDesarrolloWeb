@@ -26,6 +26,26 @@ public class Incidente {
     private String fechaSla;
     private String fechaCierre;
 
+    public Incidente(String idIncidente, Tiquete elTiquete, Severidad laSeveridad, Sla elSla, Urgencia laUrgencia, EstadoCaso elEstadoCaso, Inventario elInventario, Usuario elUsuario, String title, String bitacora, String fechaCreacion, String fechaSla, String fechaCierre) {
+        this.idIncidente = idIncidente;
+        this.elTiquete = elTiquete;
+        this.laSeveridad = laSeveridad;
+        this.elSla = elSla;
+        this.laUrgencia = laUrgencia;
+        this.elEstadoCaso = elEstadoCaso;
+        this.elInventario = elInventario;
+        this.elUsuario = elUsuario;
+        this.title = title;
+        this.bitacora = bitacora;
+        this.fechaCreacion = fechaCreacion;
+        this.fechaSla = fechaSla;
+        this.fechaCierre = fechaCierre;
+    }
+
+    public Incidente() {
+    }
+    
+
     public String getIdIncidente() {
         return idIncidente;
     }

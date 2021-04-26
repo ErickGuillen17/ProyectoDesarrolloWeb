@@ -12,10 +12,6 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author User
- */
 public class Conexion {
 
     private static Conexion conexion;
@@ -24,26 +20,24 @@ public class Conexion {
 
     private Conexion() {
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver")
-                    .getDeclaredConstructor()
+            Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor()
                     .newInstance();
-            conn = DriverManager.getConnection(DBURL, "administrador", "12345");
-
-        } catch (ClassNotFoundException | SQLException
-                | NoSuchMethodException | SecurityException | InstantiationException
+            conn = DriverManager.getConnection(DBURL, "administrador",
+                    "12345");
+        } catch (ClassNotFoundException | SQLException | NoSuchMethodException
+                | SecurityException | InstantiationException
                 | IllegalAccessException | IllegalArgumentException
                 | InvocationTargetException ex) {
-
-            Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Conexion.class.getName())
+                    .log(Level.SEVERE, null, ex);
         }
     }
 
-
+    /*Singleton Patron de Diseño*/
     public static synchronized Connection getConexion() {
         if (conexion == null) {
             conexion = new Conexion();
         }
         return conn;
     }
-
 }
