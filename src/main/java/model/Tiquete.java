@@ -12,23 +12,19 @@ package model;
 public class Tiquete {
 
     private int idTiquete;
-    private String titulo;
     private String descripcionTiquete;
+    private String titulo;
     private String categoria;
 
     public Tiquete() {
     }
 
-    
-    
     public Tiquete(int idTiquete, String descripcionTiquete, String titulo, String categoria) {
         this.idTiquete = idTiquete;
-        this.titulo = titulo;
         this.descripcionTiquete = descripcionTiquete;
+        this.titulo = titulo;
         this.categoria = categoria;
     }
-
-
 
     public int getIdTiquete() {
         return idTiquete;

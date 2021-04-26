@@ -24,8 +24,7 @@
                             </b:form>   
                             <b:row tooltip="Digite el titulo">
                                 <b:column >
-                                    <h:outputText value="Titulo" 
-                                                  />
+                                    <h:outputText value="Titulo"/>
                                 </b:column>
                                 <b:column >
                                     <b:inputText id="nombre"
@@ -36,8 +35,7 @@
                             </b:row>
                             <b:row tooltip="Digite la descripcion">
                                 <b:column >
-                                    <h:outputText value="Descripcion" 
-                                                  />
+                                    <h:outputText value="Descripcion"/>
                                 </b:column>
                                 <b:column >
                                     <b:inputText id="descripcion"
@@ -49,9 +47,9 @@
                             <b:row>
                                 <b:column span="5" offset="5" >
                                     <b:commandButton value="Guardar"
+                                                     action="#{tiqueteController.insertTiquete()}"
                                                      look="primary"
                                                      style="width: 33%"
-                                                     action="#{tiqueteController.insertTiquete()}"
                                                      ></b:commandButton>
                                     <!--insertar un action="" en commandButton-->
                                 </b:column>
