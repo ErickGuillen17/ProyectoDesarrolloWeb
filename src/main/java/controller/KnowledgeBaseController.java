@@ -26,17 +26,7 @@ public class KnowledgeBaseController extends KnowledgeBase implements Serializab
     public KnowledgeBaseController() {
     }
     
-    public List<KnowledgeBase> getArticulos(){
-        return KnowledgeBaseGestion.getArticulos();
-    }
-    
-    public String getArticulo(){
-        KnowledgeBase kb = KnowledgeBaseGestion.getArticulo(this.getCodigo(), this.getTitulo());
-        if(kb!=null){
-            this.setCodigo(kb.getCodigo());
-            this.setTitulo(kb.getTitulo());
-            this.setContenido(kb.getContenido());
-            this.setTipo(kb.getTipo());
-        } return "KnowledgeBase.xhtml";
+    public List<KnowledgeBase> getKnowledgeBases(){
+        return KnowledgeBaseGestion.getKnowledgeBases();
     }
 }

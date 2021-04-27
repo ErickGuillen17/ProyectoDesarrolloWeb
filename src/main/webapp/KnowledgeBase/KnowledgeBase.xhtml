@@ -12,9 +12,9 @@
             <ui:define name="content">
                 <h:form>
                     <b:container fluid="true">
-                        <b:panel title="KnowledgeBase" look="primary" collapsible="false">
-                            <b:dataTable value="#{knowledgeBaseController.articulos}"
-                                         var="KnowledgeBase"
+                        <b:panel title="Knowledge Base" look="primary" collapsible="false">
+                            <b:dataTable value="#{knowledgeBaseController.knowledgeBases}"
+                                         var="Knowledge Base"
                                          excel="true"
                                          csv="true"
                                          pdf="true"
@@ -22,17 +22,16 @@
                                          copy="true"
                                          print="true"
                                          >
-                                <b:dataTableColumn value="#{knowledgeBase.codigo}"
+                               <b:dataTableColumn value="#{knowledgeBaseController.codigo}"
                                                    label="codigo"
                                                    width="9%"/>
-                                <b:dataTableColumn value="#{knowledgeBase.titulo}"
-                                                   label="Title"
+                                <b:dataTableColumn value="#{knowledgeBaseController.titulo}"
+                                                   label="Titulo"
                                                    width="19%"/>
-                                <b:dataTableColumn value="#{knowledgeBase.tipo}"
-                                                   label="Type"
-                                                   width="15%"/>
                                 <b:dataTableColumn value="#{knowledgeBaseController.contenido}"
-                                                   label="Content"
+                                                   label="Contenido"/>
+                                <b:dataTableColumn value="#{knowledgeBaseController.tipo}"
+                                                   label="Tipo"
                                                    width="20%"/>                            
                             </b:dataTable>
                         </b:panel>

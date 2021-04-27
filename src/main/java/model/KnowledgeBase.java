@@ -25,7 +25,7 @@ public class KnowledgeBase {
         this.contenido = contenido;
         this.tipo = tipo;
     }
-
+    
     public int getCodigo() {
         return codigo;
     }
