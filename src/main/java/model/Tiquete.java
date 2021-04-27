@@ -9,30 +9,30 @@ package model;
  *
  * @author Alejandro
  */
-public class Tiquete {
+public class Tiquete {  
 
-    private int idTiquete;
-    private String descripcionTiquete;
+//    private int idTiquete;    
     private String titulo;
-    private String categoria;
+    private String descripcionTiquete;    
+    private int categoria;
 
     public Tiquete() {
     }
 
-    public Tiquete(int idTiquete, String descripcionTiquete, String titulo, String categoria) {
-        this.idTiquete = idTiquete;
-        this.descripcionTiquete = descripcionTiquete;
-        this.titulo = titulo;
-        this.categoria = categoria;
+    public Tiquete(/*int idTiquete,*/ String titulo, String descripcionTiquete, int categoria) {
+//        this.idTiquete = idTiquete;
+          this.titulo = titulo;
+          this.descripcionTiquete = descripcionTiquete;          
+          this.categoria = categoria;
     }
 
-    public int getIdTiquete() {
-        return idTiquete;
-    }
-
-    public void setIdTiquete(int idTiquete) {
-        this.idTiquete = idTiquete;
-    }
+//    public int getIdTiquete() {
+//        return idTiquete;
+//    }
+//
+//    public void setIdTiquete(int idTiquete) {
+//        this.idTiquete = idTiquete;
+//    }
 
     public String getDescripcionTiquete() {
         return descripcionTiquete;
@@ -42,11 +42,11 @@ public class Tiquete {
         this.descripcionTiquete = descripcionTiquete;
     }
 
-    public String getCategoria() {
+    public int getCategoria() {
         return categoria;
     }
 
-    public void setCategoria(String categoria) {
+    public void setCategoria(int categoria) {
         this.categoria = categoria;
     }
 

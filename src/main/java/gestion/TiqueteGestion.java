@@ -21,7 +21,7 @@ import model.Tiquete;
 public class TiqueteGestion {
 
     private static final String SQL_GETTIQUETES = "SELECT * FROM tiquete";
-    private static final String SQL_INSERTTIQUETE = "insert into tiquete(idTiquete,descripcionTiquete,titulo,categoria) VALUES (?,?,?,?)";
+    private static final String SQL_INSERTTIQUETE = "insert into tiquete(titulo,descripcionTiquete,categoria) VALUES (?,?,?)";
 
     public static ArrayList<Tiquete> getTiquetes() {
         ArrayList<Tiquete> lista = new ArrayList<>();
@@ -31,10 +31,10 @@ public class TiqueteGestion {
             ResultSet rs = sentencia.executeQuery();
             while (rs != null && rs.next()) {
                 lista.add(new Tiquete(
-                        rs.getInt(1),
+//                        rs.getInt(1),
                         rs.getString(2),
                         rs.getString(3),
-                        rs.getString(4)
+                        rs.getInt(4)
                 ));
             }
 
@@ -50,10 +50,10 @@ public class TiqueteGestion {
         try {
             PreparedStatement sentencia = Conexion.getConexion()
                     .prepareStatement(SQL_INSERTTIQUETE);
-            sentencia.setInt(1, tiquete.getIdTiquete());
-            sentencia.setString(2, tiquete.getTitulo());
-            sentencia.setString(3, tiquete.getDescripcionTiquete());
-            sentencia.setString(4, tiquete.getCategoria());
+//            sentencia.setInt(1, tiquete.getIdTiquete());
+            sentencia.setString(1, tiquete.getTitulo());
+            sentencia.setString(2, tiquete.getDescripcionTiquete());
+            sentencia.setInt(3, tiquete.getCategoria());
             return sentencia.executeUpdate() > 0;
         } catch (SQLException ex) {
             Logger.getLogger(TiqueteGestion.class.getName())
