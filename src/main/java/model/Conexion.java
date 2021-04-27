@@ -15,15 +15,15 @@ import java.util.logging.Logger;
 public class Conexion {
 
     private static Conexion conexion;
-    private static final String DBURL = "jdbc:mysql://localhost:3306/proyecto?serverTimezone=UTC";
+    private static final String DBURL = "jdbc:mysql://localhost:3306/proyectofinal?serverTimezone=UTC";
     private static Connection conn = null;
 
     private Conexion() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor()
                     .newInstance();
-            conn = DriverManager.getConnection(DBURL, "administrador",
-                    "12345");
+            conn = DriverManager.getConnection(DBURL, "root",
+                    "eddy142099");
         } catch (ClassNotFoundException | SQLException | NoSuchMethodException
                 | SecurityException | InstantiationException
                 | IllegalAccessException | IllegalArgumentException

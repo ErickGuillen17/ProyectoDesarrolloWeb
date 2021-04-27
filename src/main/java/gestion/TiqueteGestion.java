@@ -20,8 +20,8 @@ import model.Tiquete;
  */
 public class TiqueteGestion {
 
-    private static final String SQL_GETTIQUETES = "SELECT * FROM proyecto.tiquete";
-    private static final String SQL_INSERTTIQUETE = "insert into proyecto.tiquete(idTiquete,descripcionTiquete,titulo,categoria) VALUES (?,?,?,?)";
+    private static final String SQL_GETTIQUETES = "SELECT * FROM tiquete";
+    private static final String SQL_INSERTTIQUETE = "insert into tiquete(idTiquete,descripcionTiquete,titulo,categoria) VALUES (?,?,?,?)";
 
     public static ArrayList<Tiquete> getTiquetes() {
         ArrayList<Tiquete> lista = new ArrayList<>();
