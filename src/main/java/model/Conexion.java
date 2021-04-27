@@ -23,7 +23,7 @@ public class Conexion {
             Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor()
                     .newInstance();
             conn = DriverManager.getConnection(DBURL, "root",
-                    "Semoranu97!");
+                    "root");
         } catch (ClassNotFoundException | SQLException | NoSuchMethodException
                 | SecurityException | InstantiationException
                 | IllegalAccessException | IllegalArgumentException
