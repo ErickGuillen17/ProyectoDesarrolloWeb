@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui">
+
+    <body>
+
+        <ui:composition template="./../resources/templates/plantilla.xhtml">
+
+            <ui:define name="content">
+                <h:form>
+                    <b:container fluid="true">
+                        <b:panel title="KnowledgeBase" look="primary" collapsible="false">
+                            <b:dataTable value="#{knowledgeBaseController.articulos}"
+                                         var="KnowledgeBase"
+                                         excel="true"
+                                         csv="true"
+                                         pdf="true"
+                                         columnVisibility="true"
+                                         copy="true"
+                                         print="true"
+                                         >
+                                <b:dataTableColumn value="#{knowledgeBase.codigo}"
+                                                   label="codigo"
+                                                   width="9%"/>
+                                <b:dataTableColumn value="#{knowledgeBase.titulo}"
+                                                   label="Title"
+                                                   width="19%"/>
+                                <b:dataTableColumn value="#{knowledgeBase.tipo}"
+                                                   label="Type"
+                                                   width="15%"/>
+                                <b:dataTableColumn value="#{knowledgeBaseController.contenido}"
+                                                   label="Content"
+                                                   width="20%"/>                            
+                            </b:dataTable>
+                        </b:panel>
+                    </b:container>
+                </h:form>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
