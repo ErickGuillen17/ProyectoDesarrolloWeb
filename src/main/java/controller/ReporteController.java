@@ -42,7 +42,7 @@ public class ReporteController implements Serializable {
             File jasper = new File(FacesContext
                     .getCurrentInstance().
                     getExternalContext()
-                    .getRealPath("/reports/R_Incidente.jasper"));
+                    .getRealPath("/reports/R_Tiquetes.jasper"));
 
             JasperPrint reporteJasper = JasperFillManager.
                     fillReport(jasper.getPath(), null, Conexion.getConexion());
@@ -67,7 +67,7 @@ public class ReporteController implements Serializable {
             File jasper = new File(FacesContext
                     .getCurrentInstance().
                     getExternalContext()
-                    .getRealPath("/reports/R_Incidente.jasper"));
+                    .getRealPath("/reports/R_Tiquetes.jasper"));
 
             JasperPrint reporteJasper = JasperFillManager.
                     fillReport(jasper.getPath(), null, Conexion.getConexion());
